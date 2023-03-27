@@ -94,7 +94,12 @@ h4 {
 .page-header {
     color: var(--main-color);
     padding: 2rem 9%;
-
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 section {
@@ -144,6 +149,11 @@ section {
     background-color: rgb(245, 241, 241);
 }
 
+.hero {
+    margin-top: 6rem;
+    position: relative;
+}
+
 .hero p span {
     color: var(--active-color);
 }
@@ -176,6 +186,16 @@ section {
     margin-left: auto;
 }
 
+.catalog .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.catalog .product-container .product {
+    position: relative;
+}
+
 .catalog .product-container .product .content {
     text-align: center;
     padding: 1rem 0;
@@ -188,7 +208,7 @@ section {
 }
 
 .catalog .product-container .product .image {
-    height: 35rem;
+    height: 55rem;
     width: 100%;
     overflow: hidden;
 }
@@ -202,6 +222,25 @@ section {
 .catalog .product-container .product .content .price {
     font-size: 2rem;
     color: var(--active-color);
+}
+
+.catalog .product-container .product .icons {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+.catalog .product-container .product .icons a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: #FFFBF5;
+    color: #130F40;
+    text-align: center;
 }
 
 #catalog {
@@ -220,24 +259,24 @@ section {
 }
 
 .btn {
-font-size: 1rem;
-line-height: 1.5rem;
-text-decoration: none;
-vertical-align: middle;
-text-align: center;
-background-color: transparent;
-border: 1ps solid transparent;
-padding: .375rem .75rem;
-display: inline-block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    border: 1ps solid transparent;
+    padding: .375rem .75rem;
+    display: inline-block;
 }
 
-.btn-link{
-color: white;
-background-color: var(--active-color);
-border-color: crimson;
-padding: 1rem .5rem;
-font-weight: bolder;
-border-radius: 4%;
+.btn-link {
+    color: white;
+    background-color: var(--active-color);
+    border-color: crimson;
+    padding: 1rem .5rem;
+    font-weight: bolder;
+    border-radius: 4%;
 }
 
 /* footer*/
@@ -250,7 +289,7 @@ border-radius: 4%;
 }
 
 .text-dark {
-  color: var(--main-color);  
+    color: var(--main-color);
 }
 
 .text-uppercase {
@@ -267,11 +306,11 @@ border-radius: 4%;
 }
 
 .breadcrumb {
-display: flex;
-padding: 0;
-margin-bottom: 1rem;
-font-size: .85rem;
-list-style: none;
+    display: flex;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+    list-style: none;
 }
 
 .breadcrumb-item {
@@ -281,12 +320,12 @@ list-style: none;
     font-size: 1.7rem;
 }
 
-.breadcrumb-item+.breadcrumb-item{
+.breadcrumb-item+.breadcrumb-item {
     padding-left: .5rem;
 }
 
 .breadcrumb-item.active {
-color: silver;
+    color: silver;
 }
 
 .reset-anchor {
@@ -296,4 +335,33 @@ color: silver;
 
 .h4 {
     padding: .5rem 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: .35rem .65rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.product .image .badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+.bg-sale {
+    background-color: red;
+}
+
+.bg-new {
+    background-color: green;
+}
+
+.bg-action {
+    background-color: orange;
 }
